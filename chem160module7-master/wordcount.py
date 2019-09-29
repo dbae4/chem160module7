@@ -12,6 +12,10 @@ while 1:
     if line=="":
         break
     words.extend(line.split())
+words_lower=[]
+for i in words:
+    words_lower.append(i.lower())
+    words=words_lower
 counts=Counter(words)
 for i in counts:
     print("%2d: %s"%(counts[i],i)) 
